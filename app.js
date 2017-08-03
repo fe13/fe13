@@ -19,6 +19,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use((req, res, next) => {
+  const configs = require('./configs');
+  res.locals.appName = configs.appName;
+  next();
+});
+
 app.use('/', require('./routes/home'));
 app.use('/api', require('./apis/index'));
 
