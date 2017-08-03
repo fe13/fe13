@@ -3,6 +3,7 @@ logs
 *.log
 
 .env
+*.env
 
 # Runtime data
 pids
