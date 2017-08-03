@@ -25,7 +25,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use('/', require('./routes/home'));
+app.use('/', require('./routers/home'));
 app.use('/api', require('./apis/index'));
 
 // catch 404 and forward to error handler
