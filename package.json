@@ -3,7 +3,10 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "NODE_ENV=pro node main.js"
+    "start": "node main.js"
+  },
+  "now": {
+    "dotenv": "./envs/pro.env"
   },
   "dependencies": {
     "body-parser": "~1.17.1",
