@@ -6,29 +6,17 @@
 @import "footer";
 @import "posts";
 
-body {
-  background: #f8f8f8;
-  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: $link-color;
-}
-
 #fe13 {
   margin: auto;
-  max-width: 1000px;
+  max-width: 960px;
 }
 
 #main {
   color: #333;
   padding: 10px;
-  min-height: 450px;
+  min-height: 400px;
   background: #fff;
   border-bottom: 3px solid rgba(0, 191, 255, .8);
-  .welcome {
-    font-size: 14px;
-  }
 }
 
 

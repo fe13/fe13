@@ -3,6 +3,7 @@
   box-sizing: border-box; }
 
 a {
+  color: #0070c9;
   text-decoration: none; }
 
 h1, h2, h3, h4, h5, h6, p, ul, ol {
@@ -11,6 +12,10 @@ h1, h2, h3, h4, h5, h6, p, ul, ol {
 
 ul, ol {
   list-style: none; }
+
+body {
+  background: #f8f8f8;
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif; }
 
 input, textarea, button {
   border: 0;
@@ -106,30 +111,27 @@ button {
 
 #footer {
   color: #555;
-  margin: 20px 0;
+  margin: 15px 0;
   font-size: 14px;
   text-align: center; }
+  #footer .welcome {
+    color: #f44336;
+    display: block;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 10px; }
 
 .post-form {
   max-width: 52%;
   min-width: 280px; }
 
-body {
-  background: #f8f8f8;
-  font-family: "Lucida Grande", Helvetica, Arial, sans-serif; }
-
-a {
-  color: #0070c9; }
-
 #fe13 {
   margin: auto;
-  max-width: 1000px; }
+  max-width: 960px; }
 
 #main {
   color: #333;
   padding: 10px;
-  min-height: 450px;
+  min-height: 400px;
   background: #fff;
   border-bottom: 3px solid rgba(0, 191, 255, 0.8); }
-  #main .welcome {
-    font-size: 14px; }

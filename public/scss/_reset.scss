@@ -4,6 +4,7 @@
 }
 
 a {
+  color: $link-color;
   text-decoration: none;
 }
 
@@ -14,6 +15,11 @@ h1, h2, h3, h4, h5, h6, p, ul, ol {
 
 ul, ol {
   list-style: none;
+}
+
+body {
+  background: #f8f8f8;
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 input, textarea, button {

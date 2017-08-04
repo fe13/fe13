@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-require('dotenv').config({ path: `./envs/${process.env.NODE_ENV || 'local'}.env`});
+require('dotenv').config({ path: `./envs/${process.env.NODE_ENV || 'dev'}.env`});
 
 const mongoose = require('mongoose');
 mongoose.connect(process.env.DATABASE, { useMongoClient: true });
-mongoose.PromiseProvider = global.Promise;
+mongoose.Promise = global.Promise;
 
 require('./models/post');
 

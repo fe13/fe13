@@ -25,9 +25,8 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use('/', require('./routers/home'));
-app.use('/posts', require('./routers/posts'));
-app.use('/api', require('./apis/index'));
+app.use('/', require('./routers'));
+app.use('/api', require('./apis'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

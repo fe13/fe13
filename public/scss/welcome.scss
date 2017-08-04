@@ -1,0 +1,35 @@
+@import "vars";
+@import "reset";
+@import "footer";
+
+#fe13 {
+  max-width: 600px;
+  margin: auto;
+}
+
+#header {
+  text-align: center;
+  background: deepskyblue;
+  h1 {
+    color: #fff;
+    padding: 10px 0;
+    font-size: 20px;
+    font-weight: normal;
+  }
+}
+
+#main {
+  color: #555;
+  padding: 12px 20px;
+  font-size: 14px;
+  background: #fff;
+  min-height: 360px;
+  border-bottom: 3px solid deepskyblue;
+  p {
+    margin: 10px 0;
+    line-height: 1.5;
+    a {
+      margin: 0 3px;
+    }
+  }
+}
