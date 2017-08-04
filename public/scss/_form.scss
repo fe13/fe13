@@ -38,10 +38,12 @@ textarea {
       align-items: flex-start;
     }
     label {
+      min-width: 30px;
       color: #666;
     }
     input, textarea {
       flex: 1;
+      max-width: 100%; 
     }
     textarea {
       height: 160px;

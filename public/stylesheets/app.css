@@ -53,10 +53,12 @@ textarea {
   align-items: flex-start; }
 
 .form .form-line label {
+  min-width: 30px;
   color: #666; }
 
 .form .form-line input, .form .form-line textarea {
-  flex: 1; }
+  flex: 1;
+  max-width: 100%; }
 
 .form .form-line textarea {
   height: 160px; }
