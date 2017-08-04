@@ -115,11 +115,11 @@ button {
   font-size: 14px;
   text-align: center; }
   #footer .welcome {
-    color: #f44336;
-    display: block;
     font-size: 14px;
     text-align: center;
     margin-bottom: 10px; }
+    #footer .welcome a {
+      color: orangered; }
 
 .post-form {
   max-width: 52%;
@@ -132,6 +132,6 @@ button {
 #main {
   color: #333;
   padding: 10px;
-  min-height: 400px;
+  min-height: 460px;
   background: #fff;
   border-bottom: 3px solid rgba(0, 191, 255, 0.8); }
