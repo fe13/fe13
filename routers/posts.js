@@ -5,8 +5,7 @@ const router = express.Router();
 const catchErrors = require('../helpers/catchErrors');
 
 router.post('/', catchErrors(async (req, res, next) => {
-  const post = new Post(req.body);
-  await post.save();
+  const post = await (new Post(req.body)).save()
   res.redirect('/');
 }));
 
