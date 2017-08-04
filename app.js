@@ -22,6 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use((req, res, next) => {
   const configs = require('./configs');
   res.locals.appName = configs.appName;
+  res.locals.JSON = JSON;
   next();
 });
 
