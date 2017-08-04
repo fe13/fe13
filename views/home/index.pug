@@ -1,6 +1,8 @@
 extends ../layouts/application
 
 block content
-  pre= JSON.stringify(posts, null, 2)
-  each post in posts
-    h2= post.title
+  each post, i in posts
+    .post
+      .post-title
+        | #{i + 1}
+        a(href=`${post.url}`)= post.title

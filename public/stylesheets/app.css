@@ -123,8 +123,15 @@ button {
       color: orangered; }
 
 .post-form {
-  max-width: 52%;
-  min-width: 280px; }
+  max-width: 60%;
+  min-width: 280px;
+  margin: auto; }
+
+.post .post-title {
+  margin: 5px 0;
+  font-size: 15px; }
+  .post .post-title a {
+    color: #333; }
 
 #fe13 {
   margin: auto;
@@ -133,6 +140,6 @@ button {
 #main {
   color: #333;
   padding: 10px;
-  min-height: 460px;
+  min-height: 420px;
   background: #fff;
   border-bottom: 3px solid rgba(0, 191, 255, 0.8); }
