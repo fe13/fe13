@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 mongoose.connect(process.env.DATABASE, { useMongoClient: true });
 mongoose.PromiseProvider = global.Promise;
 
-require('./models/item');
+require('./models/post');
 
 /**
  * Module dependencies.

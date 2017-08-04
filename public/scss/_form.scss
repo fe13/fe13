@@ -1,0 +1,51 @@
+label {
+  margin-right: 10px;
+}
+
+input, textarea, select {
+  color: #444;
+  height: 30px;
+  font-size: 14px;
+  border-radius: 2px;
+  border: 1px solid #ddd;
+}
+
+input {
+  padding: 6px 8px;
+}
+
+select {
+  min-width: 80px;
+}
+
+textarea {
+  resize: none;
+  padding: 10px;
+}
+
+.form-line {
+  display: flex;
+  margin: 12px 0;
+  font-size: 14px;
+  align-items: center;
+}
+
+.form {
+  .form-line {
+    &.submit {
+      justify-content: flex-end;
+    }
+    &.textarea {
+      align-items: flex-start;
+    }
+    label {
+      color: #666;
+    }
+    input, textarea {
+      flex: 1;
+    }
+    textarea {
+      height: 160px;
+    }
+  }
+}

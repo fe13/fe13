@@ -6,23 +6,35 @@ const schema = new mongoose.Schema({
     trim: true,
     required: [true, '标题是必须的']
   },
-  link: {
-    type: String,
-    trim: true
-  },
+
   by: {
     type: String
   },
+
+  url: {
+    type: String,
+    trim: true
+  },
+
   type: {
     type: String,
-    enum: ['news', 'comment', 'job', 'joke', 'show']
+    enum: ['news', 'work', 'job', 'joke']
   },
+
+  text: {
+    type: String
+  },
+  
   score: {
     type: Number,
-    default: 0
+    default: 1
+  }
+  
+}, {
+  timestamps: {
+    createdAt: 'created',
+    updatedAt: 'updated'
   }
 });
-
-
 
 module.exports = mongoose.model('Post', schema);

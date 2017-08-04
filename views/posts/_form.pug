@@ -1,0 +1,20 @@
+mixin form(post = {})
+  form(action="/posts" method="post" class="post-form form")
+    .form-line
+      label(for="title") 标题
+      input(type="text" name="title" required)
+    .form-line
+      label(for="url") 链接
+      input(type="text" name="url")
+    .form-line
+      label(for="type") 类型
+      select(name="type" required)
+        option(value="news") 新闻
+        option(value="work") 作品
+        option(value="jobs") 工作
+        option(value="joke") 笑话
+    .form-line.textarea
+      label(for="text") 内容
+      textarea(name="text")
+    .form-line.submit
+      button 提交

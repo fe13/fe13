@@ -1,14 +1,22 @@
-* { box-sizing: border-box; }
+* { 
+  outline: 0;
+  box-sizing: border-box;
+}
 
 a {
   text-decoration: none;
 }
 
-h1, ul, ol {
+h1, h2, h3, h4, h5, h6, p, ul, ol {
   margin: 0;
   padding: 0;
 }
 
 ul, ol {
   list-style: none;
+}
+
+input, textarea, button {
+  border: 0;
+  -webkit-appearance: none;
 }

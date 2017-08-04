@@ -6,7 +6,8 @@
   background: deepskyblue;
   .menu {
     display: flex;
-    > li { margin: 0 5px; }
+    justify-content: center;
+    > li { margin: 0 6px; }
     @media (max-width: 320px) {
       font-size: 14px;
     }
@@ -23,7 +24,7 @@
     align-items: center;
     height: $header-height;
     &:hover {
-      color: $link-color;
+      color: #f4f4f4;
     }
   }
 }

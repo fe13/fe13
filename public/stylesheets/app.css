@@ -1,15 +1,73 @@
 * {
+  outline: 0;
   box-sizing: border-box; }
 
 a {
   text-decoration: none; }
 
-h1, ul, ol {
+h1, h2, h3, h4, h5, h6, p, ul, ol {
   margin: 0;
   padding: 0; }
 
 ul, ol {
   list-style: none; }
+
+input, textarea, button {
+  border: 0;
+  -webkit-appearance: none; }
+
+label {
+  margin-right: 10px; }
+
+input, textarea, select {
+  color: #444;
+  height: 30px;
+  font-size: 14px;
+  border-radius: 2px;
+  border: 1px solid #ddd; }
+
+input {
+  padding: 6px 8px; }
+
+select {
+  min-width: 80px; }
+
+textarea {
+  resize: none;
+  padding: 10px; }
+
+.form-line {
+  display: flex;
+  margin: 12px 0;
+  font-size: 14px;
+  align-items: center; }
+
+.form .form-line.submit {
+  justify-content: flex-end; }
+
+.form .form-line.textarea {
+  align-items: flex-start; }
+
+.form .form-line label {
+  color: #666; }
+
+.form .form-line input, .form .form-line textarea {
+  flex: 1; }
+
+.form .form-line textarea {
+  height: 160px; }
+
+button {
+  color: #555;
+  cursor: pointer;
+  padding: 6px 14px;
+  background: #fff;
+  border-radius: 2px;
+  font-size: 14px;
+  transition: .1s;
+  border: 1px solid #ccc; }
+  button:hover {
+    border-color: #999; }
 
 #header {
   height: 30px;
@@ -18,9 +76,10 @@ ul, ol {
   justify-content: space-between;
   background: deepskyblue; }
   #header .menu {
-    display: flex; }
+    display: flex;
+    justify-content: center; }
     #header .menu > li {
-      margin: 0 5px; }
+      margin: 0 6px; }
     @media (max-width: 320px) {
       #header .menu {
         font-size: 14px; } }
@@ -36,7 +95,7 @@ ul, ol {
     align-items: center;
     height: 30px; }
     #header a:hover {
-      color: #0070c9; }
+      color: #f4f4f4; }
 
 #logo {
   color: #fff;
@@ -45,7 +104,18 @@ ul, ol {
   font-weight: normal;
   display: inline-block; }
 
+#footer {
+  color: #555;
+  margin: 20px 0;
+  font-size: 14px;
+  text-align: center; }
+
+.post-form {
+  max-width: 52%;
+  min-width: 280px; }
+
 body {
+  background: #f8f8f8;
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif; }
 
 a {
@@ -54,3 +124,12 @@ a {
 #fe13 {
   margin: auto;
   max-width: 1000px; }
+
+#main {
+  color: #333;
+  padding: 10px;
+  min-height: 450px;
+  background: #fff;
+  border-bottom: 3px solid rgba(0, 191, 255, 0.8); }
+  #main .welcome {
+    font-size: 14px; }

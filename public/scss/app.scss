@@ -1,8 +1,13 @@
 @import "vars";
 @import "reset";
+@import "form";
+@import "button";
 @import "header";
+@import "footer";
+@import "posts";
 
 body {
+  background: #f8f8f8;
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -13,6 +18,17 @@ a {
 #fe13 {
   margin: auto;
   max-width: 1000px;
+}
+
+#main {
+  color: #333;
+  padding: 10px;
+  min-height: 450px;
+  background: #fff;
+  border-bottom: 3px solid rgba(0, 191, 255, .8);
+  .welcome {
+    font-size: 14px;
+  }
 }
 
 
