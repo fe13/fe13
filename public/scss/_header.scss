@@ -41,6 +41,8 @@
   #header {
     .menu {
       order: 1;
+      flex-basis: 100%;
+      justify-content: flex-start;
     }
   }
 }
