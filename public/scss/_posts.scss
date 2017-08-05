@@ -4,12 +4,27 @@
   margin: 30px auto;
 }
 
-.post {
+.post-item {
+  display: flex;
+  margin: 10px 0;
+  font-size: 14px;
+  align-items: center;
+  .post-rank {
+    color: #666;
+    min-width: 20px;
+    text-align: right;
+    margin-right: 6px;
+  }
+  .post-type {
+    color: #666;
+    min-width: 40px;
+    margin-right: 5px;
+  }
   .post-title {
     margin: 5px 0;
     font-size: 15px;
-    a {
-      color: #333;
-    }
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 }

@@ -18,7 +18,7 @@ const schema = new mongoose.Schema({
 
   type: {
     type: String,
-    enum: ['news', 'work', 'job', 'joke']
+    enum: ['news', 'work', 'jobs', 'joke']
   },
 
   text: {

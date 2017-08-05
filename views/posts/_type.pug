@@ -1,0 +1,9 @@
+mixin type(post = {})
+  if post.type == 'news'
+    | 新闻
+  else if post.type == 'work'
+    | 作品
+  else if post.type == 'joke'
+    | 笑话
+  else if post.type == 'jobs'
+    | 工作

@@ -1,8 +1,15 @@
 extends ../layouts/application
 
+include ../posts/_type
+
 block content
-  each post, i in posts
-    .post
+  each post, index in posts
+    .post-item
+      .post-rank
+        | #{index + 1}.
+      .post-type
+        | [
+        +type(post)
+        | ]
       .post-title
-        | #{i + 1}
         a(href=`${post.url}`)= post.title

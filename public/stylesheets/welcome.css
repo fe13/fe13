@@ -14,7 +14,6 @@ ul, ol {
   list-style: none; }
 
 body {
-  background: #f8f8f8;
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif; }
 
 input, textarea, button {
@@ -22,7 +21,7 @@ input, textarea, button {
   -webkit-appearance: none; }
 
 #footer {
-  color: #555;
+  color: #333;
   margin: 15px 0;
   font-size: 14px;
   text-align: center; }
@@ -50,7 +49,7 @@ input, textarea, button {
   color: #555;
   padding: 12px 20px;
   font-size: 14px;
-  background: #fff;
+  background: #f8f8f8;
   min-height: 360px;
   border-bottom: 3px solid deepskyblue; }
   #main p {

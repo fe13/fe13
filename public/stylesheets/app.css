@@ -14,7 +14,6 @@ ul, ol {
   list-style: none; }
 
 body {
-  background: #f8f8f8;
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif; }
 
 input, textarea, button {
@@ -111,7 +110,7 @@ button {
   display: inline-block; }
 
 #footer {
-  color: #555;
+  color: #333;
   margin: 15px 0;
   font-size: 14px;
   text-align: center; }
@@ -127,11 +126,26 @@ button {
   min-width: 280px;
   margin: 30px auto; }
 
-.post .post-title {
-  margin: 5px 0;
-  font-size: 15px; }
-  .post .post-title a {
-    color: #333; }
+.post-item {
+  display: flex;
+  margin: 10px 0;
+  font-size: 14px;
+  align-items: center; }
+  .post-item .post-rank {
+    color: #666;
+    min-width: 20px;
+    text-align: right;
+    margin-right: 6px; }
+  .post-item .post-type {
+    color: #666;
+    min-width: 40px;
+    margin-right: 5px; }
+  .post-item .post-title {
+    margin: 5px 0;
+    font-size: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; }
 
 #fe13 {
   margin: auto;
@@ -141,5 +155,5 @@ button {
   color: #333;
   padding: 10px;
   min-height: 420px;
-  background: #fff;
+  background: #f8f8f8;
   border-bottom: 3px solid rgba(0, 191, 255, 0.8); }
