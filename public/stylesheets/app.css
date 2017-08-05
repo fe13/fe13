@@ -75,19 +75,17 @@ button {
     border-color: #999; }
 
 #header {
-  height: 30px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  background: deepskyblue; }
+  background: deepskyblue;
+  min-height: 30px; }
   #header .menu {
     display: flex;
     justify-content: center; }
     #header .menu > li {
       margin: 0 6px; }
-    @media (max-width: 320px) {
-      #header .menu {
-        font-size: 14px; } }
   #header .user {
     font-size: 14px;
     display: flex;
@@ -104,10 +102,13 @@ button {
 
 #logo {
   color: #fff;
-  font-size: 18px;
+  font-size: 20px;
   margin-left: 6px;
-  font-weight: normal;
-  display: inline-block; }
+  font-weight: normal; }
+  @media (max-width: 767px) {
+    #logo {
+      flex-basis: 100%;
+      padding-top: 6px; } }
 
 #footer {
   color: #666;
@@ -126,28 +127,57 @@ button {
   min-width: 280px;
   margin: 30px auto; }
 
-.post-item {
+.post-main {
   display: flex;
-  margin: 10px 0;
   font-size: 14px;
+  margin-top: 10px;
   align-items: center; }
-  .post-item .post-rank {
+  .post-main .post-rank {
     color: #666;
     min-width: 22px;
     text-align: right;
     margin-right: 6px; }
-  .post-item .post-type {
-    color: #666;
-    min-width: 40px;
-    margin-right: 5px; }
-  .post-item .post-title {
+  .post-main .post-title {
     margin: 5px 0;
     font-size: 15px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis; }
-    .post-item .post-title a:visited {
+    .post-main .post-title a:visited {
       color: #888; }
+
+.post-info {
+  color: #777;
+  font-size: 13px;
+  display: flex; }
+  .post-info .post-link {
+    color: #777;
+    cursor: pointer;
+    margin-left: 10px; }
+    .post-info .post-link:hover {
+      text-decoration: underline; }
+  .post-info .post-score {
+    margin-left: 6px; }
+  .post-info .post-upvote {
+    height: 13px;
+    min-width: 22px;
+    cursor: pointer;
+    position: relative; }
+    .post-info .post-upvote::after {
+      top: 1px;
+      right: 3px;
+      content: '';
+      display: block;
+      position: absolute;
+      border-bottom: 10px solid #666;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent; }
+
+.post-show h2.post-title {
+  color: #333;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.4; }
 
 #fe13 {
   margin: auto;
@@ -155,7 +185,7 @@ button {
 
 #main {
   color: #333;
-  padding: 10px;
   min-height: 420px;
+  padding: 5px 8px 15px;
   background: #f6f6f6;
   border-bottom: 3px solid rgba(0, 191, 255, 0.8); }

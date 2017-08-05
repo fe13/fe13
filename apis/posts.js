@@ -8,7 +8,7 @@ router.get('/', async (req, res, next) => {
   const size = parseInt(req.query.pageSize) || 20;
   const type = req.query.type;
   const [count, posts] = await Promise.all([
-    Post.count(),
+    Post.count(type ? { type } : null),
     Post.find(
       type ? { type } : {},
       { __v: 0 }, 
@@ -28,9 +28,19 @@ router.get('/', async (req, res, next) => {
   });
 });
 
+router.post('/', async (req, res, next) => {
+  const post = await (new Post(req.body)).save();
+  res.json(post);
+});
+
+router.delete('/:id', async (req, res, next) => {
+  await Post.findByIdAndRemove(req.param.id);
+});
+
 router.put('/:id/upvote', async (req, res, next) => {
   const post = await Post.findByIdAndUpdate(req.params.id, { $inc: { score: 1 } });
   res.json({ score: post.score + 1 });
 });
+
 
 module.exports = router;

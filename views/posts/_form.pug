@@ -1,5 +1,5 @@
 mixin form(post = {})
-  form(action="/posts" method="post" class="post-form form")
+  form(action="/posts" method="post" class="post-form form" maxlength="100")
     .form-line
       label(for="title") 标题
       input(type="text" name="title" required)

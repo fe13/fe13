@@ -1,16 +1,14 @@
 #header {
-  height: $header-height;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   background: deepskyblue;
+  min-height: $header-height;
   .menu {
     display: flex;
     justify-content: center;
     > li { margin: 0 6px; }
-    @media (max-width: 320px) {
-      font-size: 14px;
-    }
   }
   .user {
     font-size: 14px;
@@ -31,8 +29,11 @@
 
 #logo {
   color: #fff;
-  font-size: 18px;
+  font-size: 20px;
   margin-left: 6px;
   font-weight: normal;
-  display: inline-block;
+  @media (max-width: 767px) {
+    flex-basis: 100%;
+    padding-top: 6px;
+  }
 }
