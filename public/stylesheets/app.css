@@ -105,10 +105,12 @@ button {
   font-size: 20px;
   margin-left: 6px;
   font-weight: normal; }
-  @media (max-width: 767px) {
-    #logo {
-      flex-basis: 100%;
-      padding-top: 6px; } }
+
+@media (max-width: 767px) {
+  #logo {
+    padding-top: 1px; }
+  #header .menu {
+    order: 1; } }
 
 #footer {
   color: #666;
