@@ -3,8 +3,10 @@
   box-sizing: border-box; }
 
 a {
-  color: #0070c9;
+  color: #0079d8;
   text-decoration: none; }
+  a:visited {
+    color: #888; }
 
 h1, h2, h3, h4, h5, h6, p, ul, ol {
   margin: 0;
