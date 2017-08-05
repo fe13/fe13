@@ -2,8 +2,7 @@ $(document).ready(function() {
 
   $(document).on('click', '.post-upvote', function(event) {
     let $target = $(event.target);
-    let voting = $target.data('voting');
-    if (voting) return;
+    if ($target.data('voting')) return;
     $.ajax({
       url: `/api/posts/${$target.data('id')}/upvote`,
       method: 'PUT',
