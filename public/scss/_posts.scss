@@ -11,7 +11,7 @@
   align-items: center;
   .post-rank {
     color: #666;
-    min-width: 20px;
+    min-width: 22px;
     text-align: right;
     margin-right: 6px;
   }
@@ -26,5 +26,8 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    a:visited {
+      color: #888;
+    }
   }
 }
