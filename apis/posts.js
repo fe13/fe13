@@ -8,7 +8,7 @@ router.get('/', async (req, res, next) => {
   const posts = await Post.find(
     type ? { type } : {},
     { __v: 0 }, 
-    { sort: { created: -1, score: 1 }}
+    { sort: { updated: -1, score: 1 }}
   );
   res.json(posts);
 });
