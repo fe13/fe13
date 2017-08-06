@@ -11,11 +11,11 @@ mixin form(post = {})
     .form-line
       label(for="type") 类型
       select(name="type" required)
-        option(value="news" selected=post.type == 'news') 新闻
-        option(value="work" selected=post.type == 'work') 作品
-        option(value="jobs" selected=post.type == 'jobs') 工作
-        option(value="joke" selected=post.type == 'joke') 笑话
-        option(value="asks" selected=post.type == 'asks') 提问
+        option(value="news" selected=(post.type == 'news')) 新闻
+        option(value="work" selected=(post.type == 'work')) 作品
+        option(value="jobs" selected=(post.type == 'jobs')) 工作
+        option(value="joke" selected=(post.type == 'joke')) 笑话
+        option(value="asks" selected=(post.type == 'asks')) 提问
     .form-line.textarea
       label(for="text") 内容
       textarea(name="text") #{post.text || ''}
