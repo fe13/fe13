@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const Post = mongoose.model('Post');
 const express = require('express');
 const router = express.Router();
+const catchErrors = require('../helpers/catchErrors');
 
 router.get('/', async (req, res, next) => {
   const page = parseInt(req.query.page) || 1;
@@ -28,19 +29,20 @@ router.get('/', async (req, res, next) => {
   });
 });
 
-router.post('/', async (req, res, next) => {
+router.post('/', catchErrors(async (req, res, next) => {
   const post = await (new Post(req.body)).save();
   res.json(post);
-});
+}));
 
-router.delete('/:id', async (req, res, next) => {
-  await Post.findByIdAndRemove(req.param.id);
-});
+router.delete('/:id', catchErrors(async (req, res, next) => {
+  await Post.findByIdAndRemove(req.params.id);
+  res.json({ done: true });
+}));
 
-router.put('/:id/upvote', async (req, res, next) => {
+router.put('/:id/upvote', catchErrors(async (req, res, next) => {
   const post = await Post.findByIdAndUpdate(req.params.id, { $inc: { score: 1 } });
   res.json({ score: post.score + 1 });
-});
+}));
 
 
 module.exports = router;
