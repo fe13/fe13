@@ -4,6 +4,7 @@ const favicon = require('serve-favicon');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
+const postHelpers = require('./helpers/postHelpers');
 
 const app = express();
 
@@ -23,6 +24,8 @@ app.use((req, res, next) => {
   const configs = require('./configs');
   res.locals.appName = configs.appName;
   res.locals.JSON = JSON;
+  res.locals.postPath = postHelpers.postPath;
+  res.locals.postLink = postHelpers.postLink;
   next();
 });
 

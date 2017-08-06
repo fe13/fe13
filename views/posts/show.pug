@@ -2,9 +2,6 @@ extends ../layouts/application
 
 block content
   .post-show
-    if post.url
-      a.post-title(href=`${post.url}`) #{post.title}
-    else
-      .post-title(href=`${post.url}`) #{post.title}
+    a.post-title(href=`${postLink(post)}`) #{post.title}
     .post-text #{post.text}
   

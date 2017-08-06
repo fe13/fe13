@@ -7,11 +7,11 @@ block content
         .post-rank
           | #{skip + index + 1}.
         .post-title
-          a(href=`${post.url || '/posts/' + post._id }`)= post.title
+          a(href=`${postLink(post)}`)= post.title
       .post-info(title="赞")
         .post-upvote(data-id=`${post._id}`)
         .post-score #{post.score} 赞
-        a.post-link(href=`/posts/${post._id}`) 详情
+        a.post-link(href=`${postPath(post)}`) 详情
 
   if more
     if type
