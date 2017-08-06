@@ -5,13 +5,16 @@ block content
     .post-item
       .post-main
         .post-rank
-          | #{index + 1}.
+          | #{skip + index + 1}.
         .post-title
           a(href=`${post.url}`)= post.title
       .post-info
         .post-upvote(data-id=`${post._id}`)
         .post-score #{post.score} 赞
         a.post-link(href=`/posts/${post._id}`) 详情
+
+  if more
+    a.more-posts(href=`/?page=${more}`) 查看更多
 
 block scripts
   script(src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js")

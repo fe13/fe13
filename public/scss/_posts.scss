@@ -61,10 +61,26 @@
 }
 
 .post-show {
-  h2.post-title {
-    color: #333;
-    font-size: 18px;
+  padding: 10px;
+  .post-title {
+    font-size: 17px;
+    font-weight: bold;
     font-weight: normal;
     line-height: 1.4;
+    display: block;
+    margin-bottom: 5px;
   }
+  .post-text {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+
+.more-posts {
+  color: #666;
+  font-size: 14px;
+  margin-top: 12px;
+  margin-left: 26px;
+  display: inline-block;
 }
