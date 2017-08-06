@@ -3,5 +3,9 @@ extends ../layouts/application
 block content
   .post-show
     a.post-title(href=`${postLink(post)}`) #{post.title}
-    .post-text #{post.text}
+    .post-info
+      .post-upvote(title="赞" data-id=`${post._id}`)
+      .post-score #{post.score} 赞
+      a.post-edit(href=`${postEdit(post)}`) 编辑
+    pre.post-text #{post.text}
   

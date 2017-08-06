@@ -31,20 +31,22 @@
   color: #777;
   font-size: 13px;
   display: flex;
-  .post-link {
+  padding-left: 6px;
+  .post-show & { padding-left: 0; }
+  .post-link, .post-edit {
     color: #777;
     cursor: pointer;
-    margin-left: 10px;
+    margin: 0 7px;
     &:hover {
       text-decoration: underline;
     }
   }
   .post-score {
-    margin-left: 6px;
+    margin: 0 7px 0 4px;
   }
   .post-upvote {
     height: 13px;
-    min-width: 22px;
+    min-width: 16px;
     cursor: pointer;
     position: relative;
     &::after {
@@ -74,6 +76,7 @@
     color: #666;
     font-size: 14px;
     line-height: 1.5;
+    white-space: pre-wrap;
   }
 }
 

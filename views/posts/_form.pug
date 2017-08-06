@@ -1,21 +1,23 @@
 mixin form(post = {})
-  form(action="/posts" method="post" class="post-form form" maxlength="100")
+  form(action="/posts" method="post" class="post-form form")
+    if post._id
+      input(type="hidden" value=`${post._id}` name="_id")
     .form-line
       label(for="title") 标题
-      input(type="text" name="title" required)
+      input(type="text" name="title" required value=`${post.title || ''}`)
     .form-line
       label(for="url") 链接
-      input(type="text" name="url")
+      input(type="text" name="url" value=`${post.url || ''}`)
     .form-line
       label(for="type") 类型
       select(name="type" required)
-        option(value="news") 新闻
-        option(value="work") 作品
-        option(value="jobs") 工作
-        option(value="joke") 笑话
-        option(value="asks") 提问
+        option(value="news" selected=post.type == 'news') 新闻
+        option(value="work" selected=post.type == 'work') 作品
+        option(value="jobs" selected=post.type == 'jobs') 工作
+        option(value="joke" selected=post.type == 'joke') 笑话
+        option(value="asks" selected=post.type == 'asks') 提问
     .form-line.textarea
       label(for="text") 内容
-      textarea(name="text")
+      textarea(name="text") #{post.text || ''}
     .form-line.submit
-      button 提交
+      button #{post.title ? '更新' : '提交'}

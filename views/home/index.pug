@@ -8,8 +8,8 @@ block content
           | #{skip + index + 1}.
         .post-title
           a(href=`${postLink(post)}`)= post.title
-      .post-info(title="赞")
-        .post-upvote(data-id=`${post._id}`)
+      .post-info
+        .post-upvote(title="赞" data-id=`${post._id}`)
         .post-score #{post.score} 赞
         a.post-link(href=`${postPath(post)}`) 详情
 

@@ -37,7 +37,6 @@ select {
   min-width: 80px; }
 
 textarea {
-  resize: none;
   padding: 10px; }
 
 .form-line {
@@ -61,7 +60,7 @@ textarea {
   max-width: 100%; }
 
 .form .form-line textarea {
-  height: 160px; }
+  min-height: 200px; }
 
 button {
   color: #555;
@@ -154,18 +153,21 @@ button {
 .post-info {
   color: #777;
   font-size: 13px;
-  display: flex; }
-  .post-info .post-link {
+  display: flex;
+  padding-left: 6px; }
+  .post-show .post-info {
+    padding-left: 0; }
+  .post-info .post-link, .post-info .post-edit {
     color: #777;
     cursor: pointer;
-    margin-left: 10px; }
-    .post-info .post-link:hover {
+    margin: 0 7px; }
+    .post-info .post-link:hover, .post-info .post-edit:hover {
       text-decoration: underline; }
   .post-info .post-score {
-    margin-left: 6px; }
+    margin: 0 7px 0 4px; }
   .post-info .post-upvote {
     height: 13px;
-    min-width: 22px;
+    min-width: 16px;
     cursor: pointer;
     position: relative; }
     .post-info .post-upvote::after {
@@ -190,7 +192,8 @@ button {
   .post-show .post-text {
     color: #666;
     font-size: 14px;
-    line-height: 1.5; }
+    line-height: 1.5;
+    white-space: pre-wrap; }
 
 .more-posts {
   color: #666;

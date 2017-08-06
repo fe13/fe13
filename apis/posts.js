@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const Post = mongoose.model('Post');
 const express = require('express');
 const router = express.Router();
+const lodash = require('lodash');
 const catchErrors = require('../helpers/catchErrors');
 
 router.get('/', async (req, res, next) => {
@@ -36,6 +37,16 @@ router.post('/', catchErrors(async (req, res, next) => {
 
 router.delete('/:id', catchErrors(async (req, res, next) => {
   await Post.findByIdAndRemove(req.params.id);
+  res.json({ done: true });
+}));
+
+router.put('/:id', catchErrors(async (req, res, next) => {
+  let data = lodash.pick(req.body, ['title', 'url', 'type', 'text']);
+  await Post.findByIdAndUpdate(
+    req.params.id,
+    { $set: data },
+    { upsert: true, runValidators: true 
+  });
   res.json({ done: true });
 }));
 

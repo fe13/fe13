@@ -18,4 +18,9 @@ router.get('/:id', catchErrors(async (req, res, next) => {
   res.render('posts/show', { post });
 }));
 
+router.get('/:id/edit', catchErrors(async (req, res, next) => {
+  const post = await Post.findById(req.params.id);
+  res.render('posts/edit', { post });
+}))
+
 module.exports = router;

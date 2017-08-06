@@ -25,6 +25,7 @@ app.use((req, res, next) => {
   res.locals.appName = configs.appName;
   res.locals.JSON = JSON;
   res.locals.postPath = postHelpers.postPath;
+  res.locals.postEdit = postHelpers.postEdit;
   res.locals.postLink = postHelpers.postLink;
   next();
 });

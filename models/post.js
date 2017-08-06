@@ -4,7 +4,8 @@ const schema = new mongoose.Schema({
   title: {
     type: String,
     trim: true,
-    required: [true, '标题是必须的']
+    required: [true, '标题是必须的'],
+    minlength: 1,
   },
 
   by: {

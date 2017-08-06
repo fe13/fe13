@@ -19,7 +19,6 @@ select {
 }
 
 textarea {
-  resize: none;
   padding: 10px;
 }
 
@@ -47,7 +46,7 @@ textarea {
       max-width: 100%; 
     }
     textarea {
-      height: 160px;
+      min-height: 200px;
     }
   }
 }
