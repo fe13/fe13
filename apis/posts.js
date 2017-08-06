@@ -46,17 +46,21 @@ router.delete('/:id', catchErrors(async (req, res, next) => {
 
 router.put('/:id', catchErrors(async (req, res, next) => {
   let data = lodash.pick(req.body, ['title', 'url', 'type', 'text']);
-  await Post.findByIdAndUpdate(
+  let post = await Post.findByIdAndUpdate(
     req.params.id,
-    { $set: data },
-    { upsert: true, runValidators: true 
-  });
-  res.json({ done: true });
+    data,
+    { new: true, upsert: true, runValidators: true }
+  );
+  res.json({ post });
 }));
 
 router.put('/:id/upvote', catchErrors(async (req, res, next) => {
-  const post = await Post.findByIdAndUpdate(req.params.id, { $inc: { score: 1 } });
-  res.json({ score: post.score + 1 });
+  const post = await Post.findByIdAndUpdate(
+    req.params.id, 
+    { $inc: { score: 1 } },
+    { new: true }
+  );
+  res.json({ score: post.score });
 }));
 
 
