@@ -7,7 +7,7 @@ block content
         .post-rank
           | #{skip + index + 1}.
         .post-title
-          a(href=`${post.url}`)= post.title
+          a(href=`${post.url || '/posts/' + post._id }`)= post.title
       .post-info(title="赞")
         .post-upvote(data-id=`${post._id}`)
         .post-score #{post.score} 赞
