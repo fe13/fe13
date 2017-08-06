@@ -30,6 +30,10 @@ router.get('/', async (req, res, next) => {
   });
 });
 
+router.get('/:id', catchErrors(async (req, res, next) => {
+  res.json(await Post.findById(req.params.id, { __v: 0 }));
+}));
+
 router.post('/', catchErrors(async (req, res, next) => {
   const post = await (new Post(req.body)).save();
   res.json(post);
