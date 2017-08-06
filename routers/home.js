@@ -25,7 +25,7 @@ async function home(req, res, next) {
   const skip = (page - 1) * size;
 
   const [count, posts] = await Promise.all([
-    Post.count(),
+    Post.count(type ? { type } : {}),
     Post.find(
       type ? { type } : {},
       { __v: 0 },
@@ -35,7 +35,7 @@ async function home(req, res, next) {
   ]);
 
   const more = page * size < count ? page + 1 : null;
-  res.render('home/index', { posts, skip, more });
+  res.render('home/index', { posts, skip, more, type });
 };
 
 module.exports = router;
