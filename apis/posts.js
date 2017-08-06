@@ -41,7 +41,7 @@ router.post('/', catchErrors(async (req, res, next) => {
 
 router.delete('/:id', catchErrors(async (req, res, next) => {
   await Post.findByIdAndRemove(req.params.id);
-  res.json({ done: true });
+  res.json({ removed: true });
 }));
 
 router.put('/:id', catchErrors(async (req, res, next) => {
