@@ -1,17 +1,15 @@
-function postPath(post = {}) {
-  return '/p/' + post._id;
-};
-
-function postLink(post = {}) {
-  return post.url || postPath(post);
-};
-
-function postEdit(post = {}) {
+exports.postEdit= function(post = {}) {
   return `${postPath(post)}/edit`;
 }
 
+exports.postLink = function(post = {}) {
+  return post.url || postPath(post);
+};
+
 exports.postPath = postPath;
-exports.postEdit = postEdit;
-exports.postLink = postLink;
+
+function postPath(post = {}) {
+  return '/p/' + post._id;
+};
 
 
